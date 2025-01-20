@@ -26,7 +26,7 @@ const SideBar: React.FC = () => {
 
   const { ref } = useOnClickOutside({
     action: closeSideBar,
-    enable: showSidebar
+    enable: showSidebar,
   });
 
   return (
@@ -70,7 +70,7 @@ const SideBar: React.FC = () => {
               </ul>
 
               <p className="xs:text-[12px] text-[11.75px] mt-auto sm:mb-6 mb-[20px] text-center font-nunito dark:text-gray-200">
-                &copy; 2023 by tMovies. All right reserved.
+                &copy; 2025 by Caper Movie. All right reserved.
               </p>
             </div>
           </m.nav>

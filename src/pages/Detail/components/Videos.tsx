@@ -7,7 +7,7 @@ interface VideosProps {
 }
 
 const Videos: FC<VideosProps> = ({ videos }) => {
-  const youtubeVideos = videos.slice(0, 2);
+  const youtubeVideos = videos.slice(1, 2);
 
   return (
     <section
@@ -22,6 +22,9 @@ const Videos: FC<VideosProps> = ({ videos }) => {
             key={video.id}
             className="sm:w-[80%] w-[90%] mx-auto flex flex-col md:gap-2 sm:gap-[6px] xs:gap-1 gap-[2px]"
           >
+            <h2 className="dark:text-secColor text-gray-800 font-nunito font-bold lg:text-[24px] md:text-[22.75px] sm:text-[18.75px] xs:text-[18px] text-[16.75px] mb-1 text-center">
+              Trailer
+            </h2>
             <h2 className="dark:text-secColor text-gray-800 font-nunito font-semibold lg:text-[24px] md:text-[22.75px] sm:text-[18.75px] xs:text-[18px] text-[16.75px] mb-1">
               {video.name}
             </h2>

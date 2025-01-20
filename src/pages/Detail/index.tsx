@@ -9,6 +9,7 @@ import { useGetShowQuery } from "@/services/TMDB";
 import { useMotion } from "@/hooks/useMotion";
 import { mainHeading, maxWidth, paragraph } from "@/styles";
 import { cn } from "@/utils/helper";
+import { FaPlay } from "react-icons/fa";
 
 const Detail = () => {
   const { category, id } = useParams();
@@ -29,10 +30,10 @@ const Detail = () => {
     document.title =
       (movie?.title || movie?.name) && !isLoading
         ? movie.title || movie.name
-        : "tMovies";
+        : "Caper Movie";
 
     return () => {
-      document.title = "tMovies";
+      document.title = "Caper Movie";
     };
   }, [movie?.title, isLoading, movie?.name]);
 
@@ -57,7 +58,7 @@ const Detail = () => {
   } = movie;
 
   const backgroundStyle = {
-    backgroundImage: `linear-gradient(to top, rgba(0,0,0), rgba(0,0,0,0.98),rgba(0,0,0,0.8) ,rgba(0,0,0,0.4)),url('https://image.tmdb.org/t/p/original/${posterPath}'`,
+    backgroundImage: `linear-gradient(to top, rgba(0,0,0), rgba(0,0,0,0.98),rgba(0,0,0,0.6) ,rgba(0,0,0,0.4)),url('https://image.tmdb.org/t/p/original/${posterPath}'`,
     backgroundPosition: "top",
     backgroundSize: "cover",
   };
@@ -111,6 +112,63 @@ const Detail = () => {
 
             <Casts casts={credits?.cast || []} />
           </m.div>
+        </div>
+      </section>
+
+      <section
+        className={cn(
+          maxWidth,
+          ` flex flex-col lg:gap-16 md:gap-14 sm:gap-12 xs:gap-10 gap-8 lg:py-24 md:py-16 sm:py-12 xs:py-10 py-8`
+        )}
+      >
+        <div className="sm:w-[80%] w-[90%] mx-auto flex flex-col md:gap-2 sm:gap-[6px] xs:gap-1 gap-[2px]">
+          <h2 className="dark:text-secColor text-gray-800 font-nunito font-semibold lg:text-[24px] md:text-[22.75px] sm:text-[18.75px] xs:text-[18px] text-[16.75px] mb-1">
+            {title || name}
+          </h2>
+          <div className="w-[100%] lg:h-[480px] md:h-[420px] sm:h-[320px] h-[210px] rounded-md mx-auto shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="trailer"
+              width="100%"
+              height="100%"
+              className="rounded-md"
+              allowFullScreen
+            />
+          </div>
+          <div className="mt-[20px] grid lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-4 grid-cols-2  gap-3">
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#5aac5aa8] w-full h-[50px] rounded-md text-white text-[14px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 1</span>
+            </div>
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#282B3A] w-full h-[50px] rounded-md text-white text-[13px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 2</span>
+            </div>
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#282B3A] w-full h-[50px] rounded-md text-white text-[13px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 3</span>
+            </div>
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#282B3A] w-full h-[50px] rounded-md text-white text-[13px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 4</span>
+            </div>
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#282B3A] w-full h-[50px] rounded-md text-white text-[13px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 5</span>
+            </div>
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#282B3A] w-full h-[50px] rounded-md text-white text-[13px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 6</span>
+            </div>
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#282B3A] w-full h-[50px] rounded-md text-white text-[13px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 7</span>
+            </div>
+            <div className="flex items-center justify-center  gap-2 px-2 py-1 bg-[#282B3A] w-full h-[50px] rounded-md text-white text-[13px] group hover:text-[#F2CE71] cursor-pointer">
+              <FaPlay />
+              <span>Episode 22</span>
+            </div>
+          </div>
         </div>
       </section>
 

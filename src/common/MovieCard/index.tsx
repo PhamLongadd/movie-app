@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaYoutube } from "react-icons/fa";
+import { FaPlay} from "react-icons/fa";
 
 import Image from "../Image";
 import { IMovie } from "@/types";
@@ -30,8 +30,8 @@ const MovieCard = ({
         />
 
         <div className="absolute top-0 left-0 w-[170px]  h-full group-hover:opacity-100 opacity-0 bg-[rgba(0,0,0,0.6)] transition-all duration-300 rounded-lg flex items-center justify-center">
-          <div className="xs:text-[48px] text-[42px] text-[#ff0000] scale-[0.4] group-hover:scale-100 transition-all duration-300 ">
-            <FaYoutube />
+          <div className="xs:text-[48px] text-[42px] text-[#fff] scale-[0.4] group-hover:scale-100 transition-all duration-300 ">
+            <FaPlay/>
           </div>
         </div>
       </Link>
